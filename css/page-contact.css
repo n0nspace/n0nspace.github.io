@@ -1,0 +1,27 @@
+:root {
+    /*text*/
+    --textColor: #000;
+    --primBackground: red;
+    --secBackground: black;
+  
+    --accentColor: yellow;
+    --accentText: #000;
+    --accentColor2: #fff;
+    --accentText2: #000;
+  
+    --border: 0px solid #eceaea;
+  }
+
+  /*contact page*/
+  #contact .col li {
+    display: flex;
+    align-items: flex-start;
+    list-style-type: "\f058";
+    padding-bottom: 5px;
+  }
+
+  #contact .col {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 800px;
+  }

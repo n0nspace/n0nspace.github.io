@@ -1,0 +1,13 @@
+:root {
+    /*text*/
+    --textColor: #000;
+    --primBackground: rgb(200, 0, 255);
+    --secBackground: black;
+  
+    --accentColor: yellow;
+    --accentText: #000;
+    --accentColor2: #fff;
+    --accentText2: #000;
+  
+    --border: 0px solid #eceaea;
+  }

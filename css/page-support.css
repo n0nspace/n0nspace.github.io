@@ -1,0 +1,99 @@
+:root {
+  /*text*/
+  --textColor: #fff;
+  --primBackground: blue;
+  --secBackground: black;
+
+  --accentColor: yellow;
+  --accentText: #000;
+  --accentColor2: #fff;
+  --accentText2: #000;
+
+  --border: 0px solid #eceaea;
+}
+
+/*OTHER PAGES*/
+  
+  /*support page*/
+  
+  section.help_nav {
+    flex-wrap: wrap;
+    padding: 0 25px !important;
+  }
+  
+  #by_theme {
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+  
+  #by_theme .search {
+    margin: 0px auto 50px auto;
+  }
+  
+  #theme_tags {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  #theme_tags li {
+    margin: 5px 5px;
+    list-style-type: none;
+    padding: 10px 15px;
+    background: var(--accentColor);
+  }
+  
+  #theme_tags li a {
+    color: var(--accentText);
+  }
+  
+  #top_articles .row {
+    padding: 0;
+  }
+  
+  #top_articles li {
+    margin-bottom: 15px;
+    margin-left: 15px;
+  }
+
+  #top_articles li a {
+    color: var(--textColor);
+  }
+
+  #top_articles li b {
+    background: var(--accentColor);
+    color: var(--accentText);
+  }
+  
+  #faq {
+    flex-direction: column;
+  }
+  
+  #support .quest, #support .reply {
+  
+  }
+  
+  #support .quest {
+    display: inline-flex;
+    padding: 10px 15px;
+    font-size: var(--textSize);
+    cursor: pointer;
+    margin-bottom: 15px;
+    border: 2px solid var(--textColor);
+    }
+  
+  .quest i {
+    margin-left: 20px;
+  }
+  
+  #support .reply {
+    padding: 0px;
+    height: 0;
+    overflow: hidden;
+    margin: 0 0px;
+  }
+  
+  .reply.caption {
+    padding: 0;
+  }

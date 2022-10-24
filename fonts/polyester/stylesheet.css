@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Pollyester';
+    src: url('Pollyester-Regular.eot');
+    src: local('Pollyester Regular'), local('Pollyester-Regular'),
+        url('Pollyester-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Pollyester-Regular.woff2') format('woff2'),
+        url('Pollyester-Regular.woff') format('woff'),
+        url('Pollyester-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

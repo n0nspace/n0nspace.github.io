@@ -1,0 +1,71 @@
+:root {
+    /*text*/
+    --textColor: #000;
+    --primBackground: yellow;
+    --secBackground: black;
+  
+    --accentColor: rgb(200, 0, 255);
+    --accentText: #000;
+    --accentColor2: #fff;
+    --accentText2: #000;
+  
+    --border: 0px solid #eceaea;
+  }
+    
+    #about_info {
+      padding: 0px;
+      text-transform: lowercase;
+      max-width: 700px;
+    }
+    
+    #painfo {
+      list-style-type: none;
+      text-align: justify;
+    }
+    
+    #painfo li {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+    }
+    
+    #painfo li:not(:last-child) {
+      padding-right: 20px;
+      font-weight: 500;
+    }
+    
+    #painfo b {
+      position: relative;
+      margin: 0 15px 0 0;
+      line-height: 160%;
+    }
+    
+    #paskills .bar {
+      height: 10px;
+      display: flex;
+      margin: 35px 0;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+    
+    #paskills .track {
+      width: 100%;
+    }
+    
+    #paskills .track span {
+      display: block;
+      background: var(--accentColor);
+      height: 100%;
+    }
+    
+    #paskills .track_label {
+      padding: 0px 10px;
+      margin: 0 0px 0 10px;
+      color: var(--textColor);
+      text-transform: lowercase;
+      width: 150px;
+      font-weight: bold;
+      text-align: right;
+      font-size: calc(var(--textSize) + 2px);
+      align-self: center;
+    }

@@ -1,0 +1,78 @@
+:root {
+    --fontFamily: monospace, sans-serif;
+    --fontFamily3: monospace, 'VT323';
+    --fontFamily2: Helvetica, 'Comorant Garamond';
+    --fontWeight: 500;
+    
+    --accentColor: rgb(255, 21, 21);
+    --accentColor2: rgb(255, 255, 255);
+    --accentColor3: /*rgb(2, 255, 242)*/ #76fdff;
+    --darkAccent: rgb(255, 21, 21);
+    --accentText: #fff;
+    --primBackground: rgb(9, 9, 9);
+  
+    --backgroundGradient: rgba(79, 79, 79, 0.5);
+  }
+  
+  [data-theme="light"] {
+    --textColor: #fff;
+    --linkColor: #746856;
+  
+    --accentColor: #dba260;
+    --primBackground: #111;
+  
+    --backgroundGradient: rgba(5, 247, 255, 0.2);
+  }
+  
+  @font-face {
+    font-family: 'Old London';
+    src: url(/fonts/polyester/Pollyester-Regular.woff2);
+  }
+  
+  body {
+    background: var(--primBackground);
+  }
+  
+  h1, h4 {
+    margin: 0;
+    color: var(--primBackground);
+  }
+  
+  /*NAVIGATION*/
+  
+  nav#main-nav {
+    position: fixed;
+    top: 5px;
+    left: 0;
+    width: 100vw;
+    z-index: 2;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 25px 25px;
+    border-bottom: 0px solid var(--textColor);
+  }
+  
+  nav#main-nav a {
+    padding: 0 15px;
+    border-right: 1px solid var(--textColor);
+    font-family: var(--fontFamily3);
+  }
+  
+  nav#main-nav a:last-child {
+    border-right: 0px solid var(--textColor);
+  }
+  
+  nav#main-nav .active {
+    color: var(--accentColor);
+  }
+
+  nav #inner-nav {
+    margin-left: auto;
+  }
+  
+  /*LOGO*/
+  #logo a {
+    font-size: 2rem;
+    line-height: 0;
+    font-family: 'Old London' !important;
+  }

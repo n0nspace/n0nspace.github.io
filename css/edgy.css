@@ -1,0 +1,199 @@
+:root {
+  --textColor: #fff;
+  --linkColor: #746856;
+  --fontFamily: monospace, sans-serif;
+  --fontFamily3: monospace, 'VT323';
+  --fontFamily2: Helvetica, 'Comorant Garamond';
+  --fontWeight: 500;
+  
+  --accentColor: rgb(255, 21, 21);
+  --accentColor2: rgb(255, 255, 255);
+  --accentColor3: /*rgb(2, 255, 242)*/ #76fdff;
+  --darkAccent: rgb(255, 21, 21);
+  --accentText: #fff;
+  --primBackground: rgb(9, 9, 9);
+
+  --backgroundGradient: rgba(79, 79, 79, 0.5);
+}
+
+[data-theme="light"] {
+  --textColor: #fff;
+  --linkColor: #746856;
+
+  --accentColor: #dba260;
+  --primBackground: #111;
+
+  --backgroundGradient: rgba(5, 247, 255, 0.2);
+}
+
+@font-face {
+  font-family: 'Old London';
+  src: url(/fonts/polyester/Pollyester-Regular.woff2);
+}
+
+body {
+  background: var(--primBackground);
+}
+
+h1, h4 {
+  margin: 0;
+  color: var(--primBackground);
+}
+
+/*NAVIGATION*/
+
+nav#main-nav {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 25px 25px;
+  border-bottom: 0px solid var(--textColor);
+}
+
+nav#main-nav a {
+  padding: 0 15px;
+  border-right: 1px solid var(--textColor);
+  font-family: var(--fontFamily3);
+}
+
+nav#main-nav a:last-child {
+  border-right: 0px solid var(--textColor);
+}
+
+nav#main-nav .active {
+  color: var(--accentColor);
+}
+
+/*LOGO*/
+#logo a {
+  font-size: 2rem;
+  line-height: 0;
+  font-family: 'Old London' !important;
+}
+
+/*HEADER*/
+header {
+  padding: 80px 50px;
+  height: calc(85vh - 71px);
+  background-color: transparent;
+background-image:  linear-gradient(transparent 1px, transparent 1px), linear-gradient(to bottom, var(--accentColor2) 2px, var(--primBackground) 1px);
+background-size: 100px 100px;
+box-shadow: inset 0 0 500px 35vh var(--primBackground);
+}
+#inner-head {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/*TITLE*/
+#title {
+  position: relative;
+  z-index: 1;
+}
+
+#title span.highlight {
+  padding: 40px 0 15px 0;
+
+  display: inline;
+}
+
+#title h1 {
+  font-size: 200px;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  line-height: 120%;
+  display: inline;
+  color: var(--primBackground);
+  font-family: 'Old London';
+  text-shadow: -2px -0px 0 #fff, 10px 0px 0 #fff, -2px 0px 0 #fff, 2px 0px 0 #fff; 
+  letter-spacing: 5px;
+  overflow: visible;
+}
+
+#subtitle {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: var(--textColor);
+  font-weight: 400;
+}
+
+/*SOCIAL LINKS*/
+#social {
+  margin-top: 30px;
+}
+
+#social a {
+  color: var(--textColor);
+  font-size: 2rem;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  display: block;
+  margin-left: 200px;
+  color: var(--accentColor2);
+}
+
+#intro {
+  position: relative;
+  width: 350px;
+  left: 40%;
+  margin: -180px 0 0 20px;
+  font-size: 1rem;
+}
+
+.block {
+  position: relative;
+}
+
+.square {
+  position: absolute;
+  background: /*rgb(255, 122, 204)*/ transparent;
+  width: 100%;
+  height: 100%;
+  left: -15%;
+  top: -25%;
+  border-left: 0px solid var(--textColor);
+}
+
+.square::before {
+  content: "";
+  height: 500px;
+  width: 8px;
+  background: var(--accentColor);
+  position: absolute;
+  left: 5px;
+  top: -190px;
+  border-radius: 5px 1px 0 0;
+}
+
+.block-t {
+  position: absolute;
+  z-index: 2;
+  top: -120px;
+  right: -70px;
+  transform: rotate(-5deg);
+  color:#111;
+  display: inline;
+  background: var(--accentColor);
+  line-height: 150%;
+  padding: 5px 10px;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.block-p {
+  font-family: var(--fontFamily3);
+  position: relative;
+  z-index: 1;
+  color:#fff;
+  display: inline;
+  
+  line-height: 150%;
+  font-weight: normal;
+}
+
+#color {
+  height: 400px;
+  width: 100vw;
+  background: var(--accentColor);
+  margin: 0;
+  margin-top: 20px;
+}
