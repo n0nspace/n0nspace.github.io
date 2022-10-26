@@ -326,6 +326,10 @@
   main, #banner, #footer {
     border-left: var(--border);
   }
+
+  #logo {
+    display: none;
+  }
   
   /*SIDEBAR*/
   #bar {
@@ -1162,6 +1166,10 @@
   }
   
   /*OTHER PAGES*/
+  .pages .row {
+    padding-right: 25px;
+  }
+
   .pages .tmblr-iframe.tmblr-iframe--unified-controls.tmblr-iframe--loaded.iframe-controls--desktop {
     top: 50px;
     right: 25px;
@@ -1372,16 +1380,21 @@
   
   /*PAGES NAVIGATION*/
   /*NAVIGATION*/
+  #logo {
+    display: none;
+  }
   
   nav#main-nav {
     position: fixed;
     top: 5px;
     left: 0;
-    width: 100vw;
+    margin-left: var(--barWidth);
+    width: calc(100vw - var(--barWidth));
     z-index: 2;
     font-size: 1rem;
     font-weight: 400;
     padding: 25px 25px;
+    padding-left: 0;
     border-bottom: 0px solid var(--textColor);
   }
   
@@ -1389,6 +1402,10 @@
     padding: 0 15px;
     border-right: 1px solid var(--textColor);
     font-family: var(--fontFamily3);
+  }
+
+  nav#main-nav a:first-child {
+    padding-left: 0;
   }
   
   nav#main-nav a:last-child {
@@ -1540,7 +1557,7 @@
   
   /*MEDIA QUERIES*/
   @media only screen and (max-width: 1100px) {
-    aside, .pages aside {
+    .blog aside {
       position: fixed;
       flex-direction: row;
       justify-content: unset;
@@ -1553,7 +1570,7 @@
       background: var(--accent);
     }
   
-    #bar,
+    .blog #bar,
     #desc,
     #search_bar,
     aside ul,
@@ -1562,38 +1579,38 @@
       display: none;
     }
   
-    main,
-    #banner,
-    section#footer,
-    .pages main,
-    .page_banner,
-    .pages section#footer {
+    .blog main,
+    .blog #banner,
+    .blog section#footer {
       width: 100vw;
       margin-left: 0;
       left: 0;
     }
-  
-    #scrolltop {
-      display: none;
+    
+    .page_banner {
+      padding-top: 65px;
     }
   
     #mobile_menu, #mobile_button {
-      display: block;
+      display: none;
     }
   
     #mobile_menu {
-      height: 0px;
-      display: block;
+      height: 100%;
+      left: -80vw;
+      display: none;
       overflow: hidden;
       padding: 0 0 0;
       list-style-type: none;
       position: fixed;
-      min-width: 100%;
-      top: 50px;
-      background: var(--accent);
+      min-width: 60%;
+      top: 0px;
+      background: var(--textColor);
+      color: var(--primBackground);
       z-index: 99;
-      text-align: center;
+      text-align: left;
       overflow-y: auto;
+      padding: 35px 0 0 0;
       transition: all 0.5s ease-out;
     }
   
@@ -1602,13 +1619,13 @@
     }
   
     #mobile_menu li a {
-      color: var(--accentText);
-      font-size: calc(var(--textSize) + 10px);
+      color: color: var(--primBackground);
+      font-size: 1.5rem;
       font-weight: bold;
     }
   
     #tumblr_controls {
-      display: block;
+      display: none;
       position: fixed;
       top: 0px;
       right: 0;
@@ -1622,7 +1639,7 @@
     }
   
     #tumblr_controls i {
-      color: var(--accentText);
+      color: var(--textColor);
     }
   
     label#tumblr_controls:hover,
@@ -1632,9 +1649,8 @@
     }
   
     input#mobile_button:checked ~ ul#mobile_menu {
-      height: 100%;
+      left: 0;
       transition: all 0.5s ease-in;
-      padding: 35px 0 0 0;
     }
   
     .tmblr-iframe-compact .tmblr-iframe--unified-controls {
@@ -1646,11 +1662,7 @@
     display: none;
   }
   
-  @media only screen and (max-width: 800px) {
-    #nnspc {
-      display: block;
-    }
-  
+  @media only screen and (max-width: 900px) {  
      .post {
        flex-direction: column;
      }
@@ -1709,4 +1721,48 @@
      #affiliates {
        display: none;
      }
+  }
+
+  @media only screen and (max-width: 782px) {
+    #mobile_menu, #mobile_button {
+      display: block;
+    }
+  
+    #mobile_menu {
+      display: block;
+    }
+
+    #tumblr_controls {
+      display: block; 
+    }
+
+    #logo {
+      display: block;
+      margin-right: 25px;
+      font-size: 0.9rem;
+    }
+
+    #bar {
+      display: none;
+    }
+
+    .page_banner {
+      padding-top: 45px;
+    }
+
+    nav#main-nav {
+      top: 15px;
+      padding-top: 0;
+    }
+
+    nav#main-nav #inner-nav {
+      display: none;
+    }
+
+    .pages main,
+    nav#main-nav {
+      margin-left: 0;
+      width: 100%;
+      padding-left: 20px;
+    }
   }
