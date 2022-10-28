@@ -1640,7 +1640,7 @@
     }
   
     #mobile_menu li a {
-      color: color: var(--primBackground);
+      color: var(--primBackground);
       font-size: 1.5rem;
       font-weight: bold;
     }
@@ -1666,7 +1666,6 @@
     label#tumblr_controls:hover,
     input#mobile_button:checked ~ label {
       cursor: pointer;
-      background: ;
     }
   
     input#mobile_button:checked ~ ul#mobile_menu {
