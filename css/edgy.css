@@ -1,5 +1,5 @@
 :root {
-  --textColor: #fff;
+ --textColor: #fff;
   --linkColor: #746856;
   --fontFamily: monospace, sans-serif;
   --fontFamily3: monospace, 'VT323';
@@ -10,20 +10,10 @@
   --accentColor2: rgb(255, 255, 255);
   --accentColor3: /*rgb(2, 255, 242)*/ #76fdff;
   --darkAccent: rgb(255, 21, 21);
-  --accentText: #fff;
+  --accentText: #fff; 
   --primBackground: rgb(9, 9, 9);
 
   --backgroundGradient: rgba(79, 79, 79, 0.5);
-}
-
-[data-theme="light"] {
-  --textColor: #fff;
-  --linkColor: #746856;
-
-  --accentColor: #dba260;
-  --primBackground: #111;
-
-  --backgroundGradient: rgba(5, 247, 255, 0.2);
 }
 
 @font-face {

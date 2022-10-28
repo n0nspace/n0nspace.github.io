@@ -6,17 +6,13 @@
     --fontFamily3: monospace, 'VT323';
     --fontFamily2: Helvetica, 'Comorant Garamond';
   
-    --background: #000;
-    --backgroundSecondary: #f7f7f7;
+    --primBackground: rgb(9, 9, 9);
+    --secBackground: #fff;
   
     --accentColor: rgb(255, 21, 21);
     --accentText: #000;
     --accentColor2: #fff;
     --accentText2: #000;
-    --accentStatic: #111;
-    --accentStaticWhite: #fff;
-    --accentWhite: #fff;
-    --accentBlack: #111;
   
     --border: 0px solid #eceaea;
   
@@ -32,23 +28,14 @@
   }
   
   [data-theme="dark"] {
-    --textColor: rgba(255,255,255,0.8);
-    --textSecondaryColor: #eee;
-    --textHeadlines: #fff;
-    --textLinks: #eee;
-    --textBold: #fff;
-    --background: #171717;
-    --backgroundSecondary: #1f1f1f;
-    --accent: #fff;
-    --accentText: #111;
-    --accentSecondary: #2d2d2d;
-    --accentTextSecondary: #e3e3e3;
-    --accentStatic: #111;
-    --accentStaticWhite: #fff;
-    --accentWhite: #1f1f1f;
-    --accentBlack: #1f1f1f;
-    --border: 1px solid #333333;
-  }
+    --textColor: #000;
+    --linkColor: red;
+    
+    --accentColor: rgb(255, 21, 21);
+    --accentColor2: #000;
+  
+    --primBackground: #fff;
+  } 
 
   @font-face {
     font-family: 'Old London';
@@ -98,24 +85,21 @@
   strike {}
   
   pre {
-    margin 20px 10px;
-    background: var(--backgroundSecondary);
-    padding: 10px 10px;
+    margin: 25px;
+    background: var(--secBackground);
+    padding: 20px;
     font: var(--textSize) monospace;
     letter-spacing: 0px;
     text-align: left;
     width: 100%;
-    line-height: 160%;
+    line-height: 120%;
     overflow: wrap;
     white-space: pre-wrap;       /* css-3 */
     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
     white-space: -pre-wrap;      /* Opera 4-6 */
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;
-  }
-  
-  .hljs {
-    background: var(--backgroundSecondary) !important;
+    color: var(--accentColor);
   }
   
   code {
@@ -127,7 +111,7 @@
   }
   
   blockquote {
-    border-left: 5px solid var(--backgroundSecondary);
+    border-left: 5px solid var(--textColor);
     margin-left: 15px !important;
     padding: 0 20px 0 20px;
   }
@@ -373,6 +357,7 @@
   #copyright-years {
     writing-mode: sideways-lr;
     color: var(--textColor);
+    margin-bottom: 25px;
   }
 
   #bar #title-logo a {
@@ -1215,7 +1200,7 @@
     }
   
   .page_banner {
-    padding-top: 10px;
+    padding-top: 5px;
   }
 
   .page_banner h1,
@@ -1243,7 +1228,7 @@
   }
 
   .pages .row {
-    max-width: 1000px;
+    max-width: 850px;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -1386,7 +1371,7 @@
   
   nav#main-nav {
     position: fixed;
-    top: 5px;
+    top: 0px;
     left: 0;
     margin-left: var(--barWidth);
     width: calc(100vw - var(--barWidth));
@@ -1481,17 +1466,21 @@
   }
   
   /*mode button*/
-  .theme-switch {
+  .theme-switch,
+  .theme-switch-fun {
     z-index: 9;
     cursor: pointer;
   }
   
-  #mode_input {
+  #mode_input,
+  #mode_fun {
     display: none;
   }
   
   .theme-switch::before,
-  input#mode_input:checked ~ .theme-switch::before {
+  input#mode_input:checked ~ .theme-switch::before,
+  .theme-switch-fun::before,
+  input#mode_fun:checked ~ .theme-switch-fun::before {
     display: inline-block;
     font-style: normal;
     font-variant: normal;
@@ -1500,11 +1489,17 @@
     font-size: 21px;
     padding: 25px 39.5px;
   }
+
+  .theme-switch-fun::before,
+  input#mode_fun:checked ~ .theme-switch-fun::before {
+    font-size: 40px;
+    padding: 0px 39.5px 0 39.5px;
+  }
   
   .theme-switch::before {
     font-family: var(--fontFamily3);
     font-weight: 400;
-    content: "DAY";
+    content: "HEAVEN";
     color: var(--textColor);
     writing-mode: sideways-lr;
   }
@@ -1512,9 +1507,24 @@
   input#mode_input:checked ~ .theme-switch::before {
     font-family: var(--fontFamily3);
     font-weight: 400;
-    content: "NIGHT";
+    content: "HELL";
     color: var(--textColor);
     writing-mode: sideways-lr;
+  }
+
+  .theme-switch-fun::before {
+    font-family: var(--fontFamily3);
+    font-weight: 400;
+    content: "\271D";
+    color: var(--textColor);
+    transform: rotate(180deg);
+  }
+  
+  input#mode_fun:checked ~ .theme-switch-fun::before {
+    font-family: var(--fontFamily3);
+    font-weight: 400;
+    content: "\271D";
+    transform: none;
   }
   
   /*HOVER*/

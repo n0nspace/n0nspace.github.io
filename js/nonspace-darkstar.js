@@ -1,22 +1,11 @@
 $(document).ready(function() {
-
-  $('aside').load('https://www.dl.dropboxusercontent.com/s/8dhffzy8yii5dam/sidebar.html');
-  $('#footer').load('https://www.dl.dropboxusercontent.com/s/zjpesd552fp5dyg/footer.html', function(){
-    var footerHeight = $("#footer").outerHeight();
-    $("html").attr("style","--footerHeight:" + footerHeight + "px");
-    console.log(footerHeight);
-  });
   if ($(window).width() < 1101) {
      $('#mobile_menu').load('/mobile_menu.html');
      $('body').append(
        '<div id="nnspc" style="position: fixed; top: 0; left: 0; padding: 13px; background: #181818; z-index: 9"><a style="font-family: helvetica; font-weight: bold; letter-spacing: -1px; color: #fff;" href="/">nonspace.</a></div>'
      );
   }
-  
-  /*HGIHLIGHT.JS*/
-  $('pre, pre code').each(function(i, block) {
-    hljs.highlightBlock(block);
-  });
+
   
   /*NOT FOUND PAGE*/
   if ($('p:contains("The URL you requested could not be found.")').html()) {
@@ -29,26 +18,39 @@ $(document).ready(function() {
     }
   
     const toggleSwitch = document.querySelector('input[type="checkbox"]#mode_input');
+    const toggleSwitchFun = document.querySelector('input[type="checkbox"]#mode_fun');
     const currentTheme = localStorage.getItem('theme');
   
     if (currentTheme) {
         document.documentElement.setAttribute('data-theme', currentTheme);
   
-        if (currentTheme === 'dark') {
+        if (currentTheme === 'light') {
             toggleSwitch.checked = true;
         }
+        else if (currentTheme === 'fun') {
+          toggleSwitchFun.checked = true;
+          toggleSwitch.disabled = true;
+      }
     }
   
     function switchTheme(e) {
-        if (e.target.checked) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
+        if (toggleSwitchFun.checked) {
+          document.documentElement.setAttribute('data-theme', 'fun');
+          localStorage.setItem('theme', 'fun');
+          toggleSwitch.disabled = true;
+        } else {
+          toggleSwitch.disabled = false;
+          if (toggleSwitch.checked) {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+          } else {        
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
         }
-        else {        document.documentElement.setAttribute('data-theme', 'light');
-              localStorage.setItem('theme', 'light');
         }
     }
   
+    toggleSwitchFun.addEventListener('change', switchTheme, false);
     toggleSwitch.addEventListener('change', switchTheme, false);
   
   });  

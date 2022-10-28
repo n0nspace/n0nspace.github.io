@@ -1,16 +1,36 @@
 :root {
   /*text*/
   --textColor: #fff;
-  --primBackground: blue;
-  --secBackground: black;
+  --primBackground: rgb(9, 9, 9);
+  --secBackground: #111;
 
-  --accentColor: yellow;
+  --accentColor: red;
   --accentText: #000;
   --accentColor2: #fff;
   --accentText2: #000;
 
   --border: 0px solid #eceaea;
 }
+
+[data-theme="fun"] {
+  --textColor: #fff;
+  --primBackground: blue;
+  --secBackground: rgb(0, 72, 255);
+
+  --accentColor: yellow;
+  --accentText: #000;
+}
+
+[data-theme="light"] {
+    --textColor: #000;
+    --linkColor: red;
+    
+    --accentColor: rgb(255, 21, 21);
+    --accentColor2: #000;
+  
+    --primBackground: #fff;
+    --secBackground: #f3f3f3;
+} 
 
 /*OTHER PAGES*/
   

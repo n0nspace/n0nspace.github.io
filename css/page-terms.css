@@ -1,7 +1,7 @@
 :root {
     /*text*/
     --textColor: #000;
-   --primBackground: #fff;
+   --primBackground: rgb(9, 9, 9);
     --secBackground: black;
   
     --accentColor: red;
@@ -11,6 +11,25 @@
   
     --border: 0px solid #eceaea;
   }
+
+  [data-theme="fun"] {
+    --textColor: #fff;
+    --primBackground: green;
+    --secBackground: black;
+  
+    --accentColor: yellow;
+    --accentText: #000;
+    }
+  
+    [data-theme="light"] {
+      --textColor: #000;
+      --linkColor: red;
+      
+      --accentColor: rgb(255, 21, 21);
+      --accentColor2: #000;
+    
+      --primBackground: #fff;
+    } 
 
   /*contact page*/
   #contact .col li {
