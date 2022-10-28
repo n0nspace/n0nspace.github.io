@@ -13,11 +13,11 @@
   }
   
   [data-theme="fun"] {
-    --textColor: #fff;
-    --primBackground: blue;
-    --secBackground: rgb(0, 72, 255);
+    --textColor: #000;
+    --primBackground: rgb(0, 229, 255);
+    --secBackground: rgb(255, 0, 128);
   
-    --accentColor: yellow;
+    --accentColor: magenta;
     --accentText: #000;
   }
   
