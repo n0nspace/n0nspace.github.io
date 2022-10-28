@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+ 
+  <!--NONSPACE 5.0 by @nonspace.      
+    Find more of my work at https://nonspace.dev   
+
+    Don't steal.  
+    
+    -->
+ 
+<html> 
+<head> 
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125513380-1"></script> 
+  <script>  
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());  
+ 
+    gtag('config', 'UA-125513380-1');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/png" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <title>nonspace / support</title>
+
+   <!--FONTS-->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+  
+  <!--CSS-->
+  <link rel="stylesheet" href="/css/nnspc-fw.css">
+  <link rel="stylesheet" href="/css/blog.css">
+  <link rel="stylesheet" href="/css/page-themes.css">
+
+  <!--jQUERY-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+   <!--ISOTOPE PLUGIN https://isotope.metafizzy.co/ (for filtering)-->
+   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  
+  <!--HANDLEBARS.JS--> 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script> 
+  
+  <script>
+    const sheetID = '1mVuaI7yIyF-NBnY4UJjI8kUcX9OoozjPdd7NxNGopgA';
+    const sheetTab = 'main';
+    const APIkey = 'AIzaSyCWkqFIDy8Fa-VB_mPpTI7b2iNhZPuUKig';
+  </script> 
+
+  <!--SCRIPTS--> 
+  <script src="/js/nonspace-darkstar.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/n0nspace/tumblr-sheets@main/nnspc-sheets.js"></script>
+  
+  <!--FONT AWESOME-->
+  <script src="https://kit.fontawesome.com/9a5691a2d0.js" crossorigin="anonymous"></script>
+  
+<style>
+
+</style>
+
+</head>
+
+<nav id="main-nav" role="navigation" class="flex flex-justify-between flex-align-center">
+  <div id="logo" class="no-line font1 bold">
+    <a href="/">n.</a>
+  </div>
+  <div id="inner-nav" class="font2 bold">
+    <a href="/" alt="home">root</a>
+    <a href="/about.html">about</a>
+    <a href="nonspace.dev/tagged/blog">blog</a>
+    <a href="/themes.html" class="active">themes</a>
+    <a href="/support.html">support</a>
+    <a href="/contact.html">contact</a>
+  </div>
+</nav>
+
+<body class="pages"> 
+<!--CONTROLS & MOBILE--------------------------------------------------->
+  <!--MOBILE NAVIGATION-->
+  <input id="mobile_button" type="checkbox" name="mobile_menu" />
+  <label id="tumblr_controls" for="mobile_button"><i class="fas fa-bars"></i></label> 
+  <ul id="mobile_menu">
+    
+  </ul>
+<!--CONTROLS END-------------------------------------------------------->
+  
+<!--CONTAINER----------------------------------------------------------->
+  <div id="wrapper">
+    <div id="bar">
+        <ul class="no-bullet">
+          <li id="title-logo" class="no-line"><a href="/">n.</a></li> 
+          <li id="copyright-years">(c) <span>{CopyrightYears}</span></li>
+        </ul>
+        <input type="checkbox" id="mode_fun" />
+        <label class="theme-switch-fun" for="mode_fun"></label>
+        <input type="checkbox" id="mode_input" />
+        <label class="theme-switch" for="mode_input"></label>
+    </div>
+    
+    <!--SUPPORT--> 
+    
+  <main id="support">    
+   <div id="banner_support" class="page_banner">
+    <div class="inner">
+        <section>
+          <div class="row">
+            <h1>Themes</h1>
+            <h2>What's the mood?</h2>
+          </div>
+        </section>
+    </div>
+   </div>  
+   <div class="inner">
+    <section>
+      <div class="row">
+        <ul id="theme-filter">
+            <li><b>Filters:</b></li>
+            <li>
+              <a href="#" data-filter="*">all</a>
+            </li>
+            <li>
+              <a href="#" data-filter=".blog">blog themes</a>
+            </li>
+            <li>
+              <a href="#" data-filter=".page">page themes</a>
+            </li>
+            <li>
+              <a href="#" data-filter=".sheets">spreadsheets</a>
+            </li>
+          </ul>
+      </div>
+      <div id="grid" class="row help_nav divider">
+        <script id="themes-table" type="text/x-handlebars-template">
+            {{#each []}}
+            <div class="card {{this.filters}}" target="_blank" class="topics">
+                <a href="{{this.post}}" target="_blank"><img src="{{this.image}}"></a>
+                <h3><a href="{{this.post}}" target="_blank">{{this.name}}</a></h3>
+                <div class="box_desc">
+                    <a href="{{this.preview}}" target="_blank">preview</a> / <a href="{{this.github}}" target="_blank">Github</a>{{#if this.themegarden}} / <a href="{{this.themegarden}}" target="_blank">theme garden</a>{{/if}}
+                    <p>{{{this.description}}}</p>
+                </div>
+            </div>
+            {{/each}}
+          </script>
+      </div>
+    </section>
+    
+    <footer>
+        <div class="row">
+            <p><a href="https://ko-fi.com/A00555DS" target="_blank">want to support me? &#10085;</a></p>
+            <p><a href="https://codingcabin.tumblr.com/">coding cabin</a> / <a href="https://codingcabin.tumblr.com/post/183159385932">readability prodigy</a></p>
+          </div>
+          <div class="row flex padding-top">
+              <span>copyright (c) nonspace, powered by tumblr. all rights reserved.</span>
+          </div>
+      </footer>
+    
+   </div>
+  </main>
+    
+<!--POST CONTAINER------------------------------------------------------>
+    
+<!--POST CONTAINER END-------------------------------------------------->
+    
+</div>
+  <!--container-->
+  
+<!--FOOTER-------------------------------------------------------------->
+
+<!--FOOTER END---------------------------------------------------------->
+
+<!--CONTAINER END------------------------------------------------------->
+
+<script>
+    //TEMPLATE LIST
+    //id + html selector
+    var templateList = [
+      ['#themes-table', '#grid']
+    ];
+    
+    const contentLoaded = function() {
+  buildLayout();
+} //end contentLoaded
+
+function buildLayout(content, grid) {
+
+    $('#grid').hide();
+    $('#grid').append(content);
+
+    $('#grid').fadeIn();
+
+    //initialise isotope
+    const $grid = $('#grid').isotope({
+        itemSelector: '.card',
+        percentPosition: true,
+        masonry: {
+            // use element for option
+        columnWidth: '.card'
+        }
+    });
+
+    $('#theme-filter a').on('click', function() {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({
+            filter: filterValue
+        });
+        e.preventDefault();
+    });
+}
+
+/*function resizeGrid() {
+    const winWidth = $('main').innerWidth() - 70;
+    const cardWidth = $('.card').outerWidth() + 30;
+    const colNum = Math.floor(winWidth / cardWidth);
+
+    if (colNum > 1) {
+        $('#grid').css({
+            'width': cardWidth * colNum
+        });
+        $('.card').css({
+            'margin': '15px'
+        });
+    } else {
+        $('#grid').css({
+            'width': cardWidth - 30
+        });
+        $('.card').css({
+            'margin': '15px 0'
+        });
+    }
+}
+
+//resizeGrid on window resize
+(function() { // closure to avoid global variable
+    var timeoutResize;
+    $(window).on('resize', function() {
+        clearTimeout(timeoutResize);
+        timeoutResize = setTimeout(function() {
+            resizeGrid();
+        }, 100);
+    });
+})();*/
+  </script>
+          
+</body>
+</html>

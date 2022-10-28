@@ -27,6 +27,16 @@
     --footerHeight: 190px;
   }
   
+  [data-theme="fun"] {
+    --textColor: #000;
+    --linkColor: #fff;
+    
+    --accentColor: #fff;
+    --accentColor2: #000;
+  
+    --primBackground: red;
+  } 
+
   [data-theme="dark"] {
     --textColor: #000;
     --linkColor: red;
