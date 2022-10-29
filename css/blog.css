@@ -1039,10 +1039,6 @@
     background: none;
   }
   
-  .tag_info + .article_wrapper {
-    padding-top: 0;
-  }
-  
   
   /*PERMALINK*/
   .permalink {
