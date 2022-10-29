@@ -29,22 +29,21 @@
   
   [data-theme="fun"] {
     --textColor: #000;
-    --linkColor: #fff;
-    
-    --accentColor: #fff;
-    --accentColor2: #000;
-  
     --primBackground: red;
-  } 
-
-  [data-theme="dark"] {
-    --textColor: #000;
-    --linkColor: red;
-    
-    --accentColor: rgb(255, 21, 21);
-    --accentColor2: #000;
+    --secBackground: black;
   
-    --primBackground: #fff;
+    --accentColor: yellow;
+    --accentText: #000;
+    }
+  
+  [data-theme="light"] {
+      --textColor: #000;
+      --linkColor: red;
+      
+      --accentColor: rgb(255, 21, 21);
+      --accentColor2: #000;
+    
+      --primBackground: #fff;
   } 
 
   @font-face {
