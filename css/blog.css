@@ -70,12 +70,12 @@
   }
   
   ::selection {
-    background: var(--accent);
+    background: var(--accentColor);
     color: var(--accentText);
   }
   
   ::-moz-selection {
-    background: var(--accent);
+    background: var(--accentColor);
     color: var(--accentText);
   }
   
@@ -201,7 +201,7 @@
   }
   
   /*transitions*/
-  a:not(.topics), body > iframe:first-child,
+  a:not(.topics),
   #tumblr_controls,
   .post_header i,
   #bar ul i,
@@ -618,6 +618,14 @@
     margin-right: 0 !important;
     margin-left: 0 !important;
   }
+
+  .npf_col * {
+    margin: 0;
+  }
+
+  .caption > .npf_row {
+    margin: 0;
+  } 
   
   .reblog_body, .caption {
     padding: 15px 0 25px;
@@ -625,6 +633,12 @@
   
   .caption h2 {
     margin-bottom: 10px; width: 100%; text-align: left;
+  }
+
+  .caption h1, .caption h4 {
+    background: var(--textColor);
+    display: inline-block;
+    padding: 0; 
   }
   
   .caption p a,
@@ -646,6 +660,10 @@
   .caption a b:hover {
     color: var(--textColor);
   }
+
+  .caption br {
+    line-height: 0;
+  }
   
   .caption p {text-transform: lowercase;}
   
@@ -660,6 +678,10 @@
   
   .caption p:empty, #desc p:empty {
     margin: 0;
+  }
+
+  .caption h1 + p {
+    margin-top: 15px !important;
   }
   
   .caption p:only-child {
@@ -789,6 +811,16 @@
   .photoset {
     max-width: 100%;
   }
+
+  .tumblr-full .post_media_photo_anchor {
+    width: 100%;
+    display: block;
+    max-width: var(--postSize);
+  }
+
+  .post_media_photo_anchor {
+    width: 100%;
+  }
   
   /*link*/
   .lh a {
@@ -911,7 +943,7 @@
   
   .ptags a {
     background: var(--accentColor2);
-    color: var(--accentText2);
+    color: var(--primBackground);
     display: inline;
     text-transform: lowercase;
     font-family: var(--fontFamily3);
@@ -1036,6 +1068,14 @@
   
   .no_post h2 {
     background: none;
+  }
+
+  .tag_info {
+    display: none;
+  }
+
+  .tag_info + .article_wrapper {
+    padding-top: 20px !important;
   }
   
   
