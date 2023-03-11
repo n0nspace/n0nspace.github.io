@@ -844,6 +844,13 @@
   .chat_lines.odd b {
     color: var(--textColor);
   }
+
+  /*polls*/
+  a.poll-row {
+    background: var(--accentColor) !important;
+    color: var(--accentText);
+    border-radius: 0 !important;
+  }
   
   /*video*/
   .tumblr_video_container {
