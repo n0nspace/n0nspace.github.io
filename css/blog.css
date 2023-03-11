@@ -688,8 +688,7 @@
     margin: 0;
   }
   
-  .caption p:first-child,
-  .reblog_body.caption p:empty ~ p {
+  .caption p:first-child {
     margin-top: 0;
     padding-top: 0;
   }
