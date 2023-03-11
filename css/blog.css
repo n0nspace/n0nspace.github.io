@@ -1631,6 +1631,10 @@
       padding: 0;
       background: var(--accent);
     }
+      
+    footer {
+      margin-left: 0;
+    }
   
     .blog #bar,
     #desc,
